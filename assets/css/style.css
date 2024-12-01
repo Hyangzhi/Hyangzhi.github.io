@@ -226,15 +226,18 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
+  width: calc(100% - 300px);
   height: 100vh;
-  background: url("../img/hero-bg4.jpg") top center;
+  background: url("../img/bg.jpg") top center;
   background-size: cover;
+  padding-top: 0;
+  display: block;
+  margin-left: 300px;
 }
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -247,28 +250,59 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  text-align: center;
+  padding-top: 120px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#hero .profile-img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#hero .profile-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 8px solid rgba(255, 255, 255, 0.2);
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #e0e0e0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#hero h2 {
+  margin: 10px 0 0 0;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 56px;
-  color: #fff;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
 #hero p {
-  color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
+  margin: 15px 0 0 0;
+  font-size: 22px;
+  color: #d4d4d4;
   font-family: "Poppins", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#hero p span {
-  color: #fff;
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+/* 移除原有的 typed.js 相关样式 */
+#hero .typed,
+#hero .typed-cursor {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -333,6 +367,14 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background: #f5f8fd;
+}
+
+.about, .section-bg {
+  transition: background-color 0.3s ease;
+}
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -363,6 +405,45 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .content .info-list {
+  padding-right: 20px;
+}
+
+.about .content .info-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content .info-list li i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.about .content .info-list li strong {
+  margin-right: 10px;
+  min-width: 80px;
+}
+
+.about .content .description {
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #545454;
+  text-align: justify;
+}
+
+.about img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
@@ -1168,4 +1249,185 @@ section {
   max-height: 90%;
   margin: auto;
   margin-top: 5%;
+}
+
+.profile {
+  padding-top: 30px;
+}
+
+.project-image {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.project-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project-content {
+  text-align: left;
+  padding: 20px 0;
+}
+
+.project-content h4 {
+  color: #173b6c;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.project-content p {
+  color: #545454;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.project-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-content li {
+  color: #545454;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+  text-align: justify;
+}
+
+.project-content li:before {
+  content: "•";
+  color: #149ddd;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.project-content strong {
+  color: #2c4964;
+}
+
+.skills-content {
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-category {
+  margin-bottom: 25px;
+}
+
+.skill-category h3 {
+  color: #173b6c;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #149ddd;
+}
+
+.skill-item h4 {
+  color: #2c4964;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.skill-item p {
+  color: #545454;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .skill-category {
+    margin-bottom: 20px;
+  }
+}
+
+.project-subtitle {
+  color: #2c4964;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0 10px 0;
+}
+
+.resume-item p {
+  color: #545454;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.resume-item ul {
+  padding-left: 20px;
+}
+
+.resume-item ul li {
+  padding-bottom: 15px;
+  color: #545454;
+  line-height: 1.6;
+}
+
+.resume-item ul li strong {
+  color: #2c4964;
+  font-weight: 600;
+}
+
+/* More Section 样式 */
+.more-content {
+  padding: 20px;
+}
+
+.more-content h3 {
+  color: #173b6c;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.more-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.more-content ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.more-content ul li i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #149ddd;
+}
+
+.more-content ul li a {
+  color: #272829;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.more-content ul li a:hover {
+  color: #149ddd;
+  text-decoration: none;
 }
