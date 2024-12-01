@@ -1488,14 +1488,13 @@ section {
   text-decoration: none;
 }
 
-/* 添加署名样式 */
+/* 修改签名样式，使其响应式 */
 .signature {
-  position: absolute;
-  bottom: 60px;
+  position: relative;
   width: 100%;
   text-align: center;
   padding: 15px 0;
-  z-index: 1000;
+  margin-top: auto;
 }
 
 .signature p {
@@ -1509,6 +1508,37 @@ section {
 
 .signature p:hover {
   color: #fff;
+}
+
+/* 调整 header 内部的 flex 容器 */
+#header .d-flex.flex-column {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+/* 添加媒体查询以适应不同屏幕尺寸 */
+@media (max-height: 800px) {
+  .signature {
+    padding: 10px 0;
+  }
+  
+  .signature p {
+    font-size: 12px;
+    margin: 3px 0;
+  }
+}
+
+@media (max-height: 600px) {
+  #header .d-flex.flex-column {
+    padding-bottom: 10px;
+  }
+  
+  .signature {
+    padding: 5px 0;
+  }
 }
 
 .d-flex.flex-column {
