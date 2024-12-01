@@ -46,16 +46,23 @@
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar" style="margin-top: 30px;">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>首页</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>关于</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>简历</span></a></li>
-          <li><a href="#courses" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>近期项目</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>技能</span></a></li>
-          <li><a href="#more" class="nav-link scrollto"><i class="bx bx-link"></i> <span>更多</span></a></li>
-        </ul>
+      <nav id="navbar" class="nav-menu navbar" style="margin-top: 40px; margin-left: 40px">
+        <div class="nav-container" >
+          <ul>
+            <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>首页</span></a></li>
+            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>关于</span></a></li>
+            <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>简历</span></a></li>
+            <li><a href="#courses" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>作品</span></a></li>
+            <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>技能</span></a></li>
+            <li><a href="#more" class="nav-link scrollto"><i class="bx bx-link"></i> <span>更多</span></a></li>
+          </ul>
+        </div>
       </nav>
+
+      <div class="signature">
+        <!-- <p>Designed by Yangzhi Huang ✨</p> -->
+        <p>This Website is designed by Huang Yangzhi🎨</p>
+      </div>
     </div>
   </header>
 
@@ -221,7 +228,7 @@
               <p><strong>项目负责人</strong></p>
               
               <h5 class="project-subtitle">项目概述与成果</h5>
-              <p>创新Directional Normalized Adapter（DNA）和FedDNA方法，这是一种用于异构联邦学习的新型参数高效微调方法。在严重的数据异构情况下实现了高达2\%的精度提高，具有更快的收敛和稳定的训练。通过广泛的实验和理论分析验证了方法，证明了在保护隐私的联邦设置中的有效性。</p>
+              <p>新Directional Normalized Adapter（DNA）和FedDNA方法，这是一种用于异构联邦学习的新型参数高效微调方法。在严重的数据异构情况下实现了高达2\%的精度提高，具有更快的收敛和稳定的训练。通过广泛的实验和理论分析验证了方法，证明了在保护隐私的联邦设置中的有效性。</p>
               
               <h5 class="project-subtitle">我的贡献</h5>
               <ul>
@@ -287,14 +294,14 @@
 
           <div class="project-content">
             <h4>项目概述</h4>
-            <p>在这项工作中，我们提出了AIDoctor，一个全方位的医疗聊天机器人，支持多模式查询，准确的在线听诊和友好的界面。在AIDoctor中，我们实现了检索增强生成（RAG），使语言模型能够利用高质量的教科书数据。更具体地说，AIDoctor是为三个需求而设计的：i)数据效率。ii)模型集成。iii)用户友好。我们进行了全面的实证实验来验证AIDoctor在不同NLP任务中的有效性。值得注意的是，我们的单一模型在各种数据集上实现了关键字提取、文本摘要、问题回答、在线听析和下一个问题预测等方面的竞争性性能，而人工监督最少。此外，用户界面实现清晰和有用，支持在线人机聊天交互和实时调整。最后，我们的模型达到了与人类医生相当的分数，并展示了对问题、情况或它们的组合进行概括的卓越能力，证明了它在现实世界应用中的实用性。</p>
+            <p>在这项工作中，我们提出了AIDoctor，一个全方位的医疗聊天机器人，支持多模式查询，准确的在线听诊和友好的界面。在AIDoctor中，我们实现了检索增强生成（RAG），使语言模型能够利用高质量的教科书数据。更具体地说，AIDoctor是为三个需求而设计的：i)数据效率。ii)模型集成。iii)用户友好。我们进行全面的实证实验来证AIDoctor在不同NLP任务中的有效性。值得注意的是，我们的单一模型在各种数据集上实现了关键字提取、文本摘要、问题回答、在线听析和下一个问题预测等方面的竞争性性能，而人工监督最少。此外，用户界面实现清晰和有用，支持在线人机聊天交互和实时调整。最后，我们的模型达到了与人类医生相当的分数，并展示了对问题、情况或它们的组合进行概括的卓越能力，证明了它在现实世界应用中的实用性。</p>
 
             <h4>我的贡献</h4>
             <ul>
               <li><strong> 收集并整理来自真实医患对话、AI生成的场景数据及权威医学教材的数据集，收集到的数据集比较全面，包含高质量医疗知识库（如教材、真实问答数据库，AI生成扩展数据库）</li>
               
               <li><strong>算法开发与模型优化（Transformer）：</strong>
-                选择基于Llama-7B 进行模型开发，利用其在自然语言处理（NLP）中表现出色，尤其擅长生成复杂问题的上下文相关答案，适用于医疗问答场景。使用KeyBERT提取对话高相关关键词，从而支持更高效的信息检索。使���Phi-1.5预测并生成后续提问，从而改善对话流程。</li>
+                选择基于Llama-7B 进行模型开发，利用其在自然语言处理（NLP）中表现出色，尤其擅长生成复杂问题的上下文相关答案，适用于医疗问答场景。使用KeyBERT提取对话高相关关键词，从而支持更高效的信息检索。使Phi-1.5预测并生成后续提问，从而改善对话流程。</li>
               
               <li><strong>需求分析与解决方案设计（RAG，多模态）：</strong>
                 深入分析远程医疗的痛点：医学知识覆盖范围广，单一模型无法全面掌握所有信息。因此，提出使用检索增强生成（RAG），实时利用外部知识库，解决模型记忆局限性，并减少错误与幻觉（Hallucination），生成答案更可信且贴合实际。 同时，考虑到医疗场景涉及多种数据类型，如文本（对话）、音频（心肺音，呼吸音），单一模态无法全面覆盖患者病情信息。为实现这一点，我们集成U-Net和ResNet，用于音频数据分析，实现远程听诊功能。</li>
